@@ -3,9 +3,9 @@
  *
  * This contains all the text for the HomePage container.
  */
-import { defineMessages } from 'react-intl';
+import { defineMessages } from 'react-intl'
 
-export const scope = 'app.containers.HomePage';
+export const scope = 'app.containers.HomePage'
 
 export default defineMessages({
   header: {
@@ -13,4 +13,4 @@ export default defineMessages({
     defaultMessage: 'This is the HomePage container!',
     description: 'hahahahahah',
   },
-});
+})

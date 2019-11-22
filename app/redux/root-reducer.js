@@ -7,7 +7,8 @@ import { connectRouter } from 'connected-react-router';
 const rootReducer = combineReducers({
   modal,
   // eslint-disable-next-line global-require
-  user: require('./_user-redux').reducer,
+  user: require('../store/user/_user-redux').reducer,
+  spinner: require('../store/spinner/_spinner-redux').reducer,
   language: languageProviderReducer,
   router: connectRouter(history),
 })

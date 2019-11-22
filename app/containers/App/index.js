@@ -7,22 +7,26 @@
  *
  */
 
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import HomePage from 'containers/HomePage/Loadable'
+import CreatePage from '../CreatePage/Loadable'
+import EditPage from '../EditPage/Loadable'
+import NotFoundPage from 'containers/NotFoundPage/Loadable'
 
-import GlobalStyle from '../../global-styles';
+import GlobalStyle from '../../global-styles'
 
 export default function App() {
   return (
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/create" component={CreatePage} />
+        <Route exact path="/edit/:id" component={EditPage}></Route>
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
     </div>
-  );
+  )
 }
