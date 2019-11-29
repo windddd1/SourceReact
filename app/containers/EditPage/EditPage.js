@@ -49,8 +49,15 @@ export default function EditPage(props) {
   useEffect(()=>{
     openSpinner()
     getDetailUserRequest()
+    return (
+      setUser({
+        name: '',
+        userName: '',
+        email: ''
+      })
+    )
   },[])
-  useMemo(() => {
+  useLayoutEffect(() => {
     setUser({
       name: userToStore.name,
       userName: userToStore.username,

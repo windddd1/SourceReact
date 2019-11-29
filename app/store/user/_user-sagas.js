@@ -8,11 +8,9 @@ const httpClient = axios.create()
 httpClient.defaults.timeout = 3000
 
 const UserSagas = {
-  // eslint-disable-next-line generator-star-spacing
   *getAllUser() {
     try {
       const userList = yield call(apiGetUser)
-      // eslint-disable-next-line import/no-named-as-default-member
       yield put(UserActions.getUserSuccess(userList.data))
       yield put(SpinnerActions.hide())
     } catch (err) {
@@ -35,7 +33,6 @@ const UserSagas = {
   *createUser(action) {
     try {
       const { user } = action
-      console.log(123213)
       const response = yield call(apiPostUser, user)
       console.log(response)
       yield put(push('/'))
